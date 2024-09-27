@@ -11,6 +11,8 @@ services:
       - "50000:50000"
     networks:
       - app-network
+    depends_on:
+      - ms-nginx
 
   ms-compitem-crud:
     container_name: ms-compitem-crud
