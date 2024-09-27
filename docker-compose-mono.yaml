@@ -18,6 +18,7 @@ services:
     image: quay.io/ortelius/ortelius
     privileged: true
     user: root
+    platform: linux/arm64
     ports:
       - "8080:8082"
     environment:
