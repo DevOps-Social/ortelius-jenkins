@@ -10,8 +10,16 @@ services:
     networks:
       - app-network
     depends_on:
-      - ms-nginx
-
+      - ms-dep-pkg-r                                                                                                                                               168.6s
+      - ms-nginx                                                                                                                                                        54.5s
+      - ms-compitem-crud                                                                                                                                               110.0s
+      - ms-ui                                                                                                                                                          137.8s
+      - ms-sbom                                                                                                                                403.5s
+      - ms-general                                                                                                                                                     168.6s
+      - ms-scorecard                                                                                                                         403.5s
+      - ms-dep-pkg-cud                                                                                                                                               90.0s
+      - ms-validate-user                                                                                                                     403.5s
+      - ms-textfile-crud
   ms-compitem-crud:
     container_name: ms-compitem-crud
     image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
