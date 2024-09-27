@@ -17,7 +17,7 @@ services:
       - ms-sbom                                                                                                                                403.5s
       - ms-general                                                                                                                                                     168.6s
       - ms-scorecard                                                                                                                         403.5s
-      - ms-dep-pkg-cud                                                                                                                                               90.0s
+      - ms-dep-pkg-cud
       - ms-validate-user                                                                                                                     403.5s
       - ms-textfile-crud
 
