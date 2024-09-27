@@ -10,44 +10,21 @@ services:
     networks:
       - app-network
     depends_on:
-      - ms-dep-pkg-r
-      - ms-nginx
-      - ms-compitem-crud
-      - ms-ui
-      - ms-sbom
-      - ms-general
-      - ms-scorecard
-      - ms-dep-pkg-cud
-      - ms-validate-user
-      - ms-textfile-crud
+      - ortelius
+      # - ms-dep-pkg-r
+      # - ms-nginx
+      # - ms-compitem-crud
+      # - ms-ui
+      # - ms-sbom
+      # - ms-general
+      # - ms-scorecard
+      # - ms-dep-pkg-cud
+      # - ms-validate-user
+      # - ms-textfile-crud
 
-  ms-compitem-crud:
-    container_name: ms-compitem-crud
-    image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-dep-pkg-cud:
-    container_name: ms-dep-pkg-cud
-    image: quay.io/ortelius/ms-dep-pkg-cud:main-v10.0.1073-g6f0f81
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-dep-pkg-r:
-    container_name: ms-dep-pkg-r
-    image: quay.io/ortelius/ms-dep-pkg-r:main-v10.0.1070-g1c2aaa
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-general:
-    container_name: ms-general
-    image: quay.io/ortelius/ms-general:main-v10.0.444-g1b7ba4
+  ortelius:
+    container_name: ortelius
+    image: quay.io/ortelius/ortelius
     privileged: true
     user: root
     environment:
@@ -58,53 +35,90 @@ services:
     networks:
       - app-network
 
-  ms-nginx:
-    container_name: ms-nginx
-    image: quay.io/ortelius/ms-nginx:main-v10.0.444-g1b7ba4
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-sbom:
-    container_name: ms-sbom
-    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439-gcab5db
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-scorecard:
-    container_name: ms-scorecard
-    image: quay.io/ortelius/ms-scorecard:main-v10.0.859-g60d68e
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-textfile-crud:
-    container_name: ms-textfile-crud
-    image: quay.io/ortelius/ms-textfile-crud:main-v10.0.951-g8e8b42
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-ui:
-    container_name: ms-ui
-    image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
-    privileged: true
-    user: root
-    networks:
-      - app-network
-
-  ms-validate-user:
-    container_name: ms-validate-user
-    image: quay.io/ortelius/ms-validate-user:main-v10.0.1019-g7b5359
-    privileged: true
-    user: root
-    networks:
-      - app-network
+#  ms-compitem-crud:
+#    container_name: ms-compitem-crud
+#    image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-dep-pkg-cud:
+#    container_name: ms-dep-pkg-cud
+#    image: quay.io/ortelius/ms-dep-pkg-cud:main-v10.0.1073-g6f0f81
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-dep-pkg-r:
+#    container_name: ms-dep-pkg-r
+#    image: quay.io/ortelius/ms-dep-pkg-r:main-v10.0.1070-g1c2aaa
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-general:
+#    container_name: ms-general
+#    image: quay.io/ortelius/ms-general:main-v10.0.444-g1b7ba4
+#    privileged: true
+#    user: root
+#    environment:
+#      - DB_PASS=postgres
+#      - DB_USER=postgres
+#    volumes:
+#      - /tmp/postgres:/pgdata
+#    networks:
+#      - app-network
+#
+#  ms-nginx:
+#    container_name: ms-nginx
+#    image: quay.io/ortelius/ms-nginx:main-v10.0.444-g1b7ba4
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-sbom:
+#    container_name: ms-sbom
+#    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439-gcab5db
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-scorecard:
+#    container_name: ms-scorecard
+#    image: quay.io/ortelius/ms-scorecard:main-v10.0.859-g60d68e
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-textfile-crud:
+#    container_name: ms-textfile-crud
+#    image: quay.io/ortelius/ms-textfile-crud:main-v10.0.951-g8e8b42
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-ui:
+#    container_name: ms-ui
+#    image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
+#
+#  ms-validate-user:
+#    container_name: ms-validate-user
+#    image: quay.io/ortelius/ms-validate-user:main-v10.0.1019-g7b5359
+#    privileged: true
+#    user: root
+#    networks:
+#      - app-network
 
 networks:
   app-network:
