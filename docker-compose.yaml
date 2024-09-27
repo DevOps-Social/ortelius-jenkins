@@ -68,7 +68,7 @@ services:
       - app-network
 
   ms-scorecard:
-    container_name: ms-general
+    container_name: ms-scorecard
     image: quay.io/ortelius/ms-scorecard:main-v10.0.859-g60d68e
     privileged: true
     user: root
