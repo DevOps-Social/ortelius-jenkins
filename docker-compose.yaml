@@ -10,17 +10,17 @@ services:
     networks:
       - app-network
     depends_on:
-      - ortelius
-      # - ms-dep-pkg-r
-      # - ms-nginx
-      # - ms-compitem-crud
-      # - ms-ui
-      # - ms-sbom
-      # - ms-general
-      # - ms-scorecard
-      # - ms-dep-pkg-cud
-      # - ms-validate-user
-      # - ms-textfile-crud
+      #- ortelius
+      - ms-dep-pkg-r
+      - ms-nginx
+      - ms-compitem-crud
+      - ms-ui
+      - ms-sbom
+      - ms-general
+      - ms-scorecard
+      - ms-dep-pkg-cud
+      - ms-validate-user
+      - ms-textfile-crud
 
   # ortelius:
   #   container_name: ortelius
