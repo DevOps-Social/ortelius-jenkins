@@ -20,6 +20,7 @@ services:
       - ms-dep-pkg-cud                                                                                                                                               90.0s
       - ms-validate-user                                                                                                                     403.5s
       - ms-textfile-crud
+
   ms-compitem-crud:
     container_name: ms-compitem-crud
     image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
