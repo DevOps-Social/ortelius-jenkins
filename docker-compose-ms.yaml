@@ -29,13 +29,12 @@ services:
     image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
     privileged: true
     user: root
-    expose: 8080:8080
     networks:
       - app-network
 
   ms-validate-user:
     container_name: ms-validate-user
-    image: quay.io/ortelius/ms-validate-user:main-v10.0.1030
+    image: quay.io/ortelius/ms-validate-user:main-v10.0.1030-g0d189f
     privileged: true
     user: root
     networks:
@@ -43,7 +42,7 @@ services:
 
   ms-sbom-export:
     container_name: ms-sbom-export
-    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439
+    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439-gcab5db
     privileged: true
     user: root
     networks:
@@ -83,7 +82,8 @@ services:
     image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
     privileged: true
     user: root
-    expose: 8080:8081
+    expose:
+      - 8080:8081
     networks:
       - app-network
 
