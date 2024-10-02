@@ -5,6 +5,7 @@ services:
     image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
     privileged: true
     user: root
+    expose: 8080:8080
     networks:
       - app-network
 
@@ -74,6 +75,7 @@ services:
     image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
     privileged: true
     user: root
+    expose: 8080:8081
     networks:
       - app-network
 
