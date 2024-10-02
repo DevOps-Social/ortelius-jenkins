@@ -64,6 +64,9 @@ services:
     environment:
       - DB_PASS=postgres
       - DB_USER=postgres
+      - DB_NAME=postgres
+      - DB_HOST=localhost
+      - DB_PORT=5432
     volumes:
       - /tmp/postgres:/pgdata
     networks:
