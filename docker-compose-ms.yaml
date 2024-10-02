@@ -90,9 +90,6 @@ services:
     image: jenkins/jenkins
     privileged: true
     user: root
-    ports:
-      - "8080:8080"
-      - "50000:50000"
     networks:
       - app-network
     depends_on:
