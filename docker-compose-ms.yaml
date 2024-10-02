@@ -35,7 +35,7 @@ services:
 
   ms-validate-user:
     container_name: ms-validate-user
-    image: quay.io/ortelius/ms-validate-user:main-v10.0.1019-g7b5359
+    image: quay.io/ortelius/ms-validate-user:main-v10.0.1030
     privileged: true
     user: root
     networks:
@@ -43,7 +43,7 @@ services:
 
   ms-sbom-export:
     container_name: ms-sbom-export
-    image: quay.io/ortelius/ms-sbom-export:main-v10.0.1019-g7b5359
+    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439
     privileged: true
     user: root
     networks:
