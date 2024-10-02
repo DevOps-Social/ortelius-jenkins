@@ -2,8 +2,7 @@
 services:
   ms-compitem-crud:
     container_name: ms-compitem-crud
-    #image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
-    image: quay.io/ortelius/ms-compitem-crud
+    image: quay.io/ortelius/ms-compitem-crud:main-v10.0.908-g51f7cb
     privileged: true
     user: root
     networks:
@@ -11,8 +10,7 @@ services:
 
   ms-dep-pkg-cud:
     container_name: ms-dep-pkg-cud
-    #image: quay.io/ortelius/ms-dep-pkg-cud:main-v10.0.1073-g6f0f81
-    image: quay.io/ortelius/ms-dep-pkg-cud
+    image: quay.io/ortelius/ms-dep-pkg-cud:main-v10.0.1073-g6f0f81
     privileged: true
     user: root
     networks:
@@ -20,8 +18,7 @@ services:
 
   ms-dep-pkg-r:
     container_name: ms-dep-pkg-r
-    #image: quay.io/ortelius/ms-dep-pkg-r:main-v10.0.1070-g1c2aaa
-    image: quay.io/ortelius/ms-dep-pkg-r
+    image: quay.io/ortelius/ms-dep-pkg-r:main-v10.0.1070-g1c2aaa
     privileged: true
     user: root
     networks:
@@ -29,8 +26,7 @@ services:
 
   ms-general:
     container_name: ms-general
-    #image: quay.io/ortelius/ms-general:main-v10.0.444-g1b7ba4
-    image: quay.io/ortelius/ms-general
+    image: quay.io/ortelius/ms-general:main-v10.0.444-g1b7ba4
     privileged: true
     user: root
     environment:
@@ -43,8 +39,7 @@ services:
 
   ms-nginx:
     container_name: ms-nginx
-    #image: quay.io/ortelius/ms-nginx:main-v10.0.444-g1b7ba4
-    image: quay.io/ortelius/ms-nginx
+    image: quay.io/ortelius/ms-nginx:main-v10.0.444-g1b7ba4
     privileged: true
     user: root
     networks:
@@ -52,8 +47,7 @@ services:
 
   ms-sbom:
     container_name: ms-sbom
-    #image: quay.io/ortelius/ms-sbom-export:main-v10.0.439-gcab5db
-    image: quay.io/ortelius/ms-sbom-export
+    image: quay.io/ortelius/ms-sbom-export:main-v10.0.439-gcab5db
     privileged: true
     user: root
     networks:
@@ -61,8 +55,7 @@ services:
 
   ms-scorecard:
     container_name: ms-scorecard
-    #image: quay.io/ortelius/ms-scorecard:main-v10.0.859-g60d68e
-    image: quay.io/ortelius/ms-scorecard
+    image: quay.io/ortelius/ms-scorecard:main-v10.0.859-g60d68e
     privileged: true
     user: root
     networks:
@@ -70,8 +63,7 @@ services:
 
   ms-textfile-crud:
     container_name: ms-textfile-crud
-    #image: quay.io/ortelius/ms-textfile-crud:main-v10.0.951-g8e8b42
-    image: quay.io/ortelius/ms-textfile-crud
+    image: quay.io/ortelius/ms-textfile-crud:main-v10.0.951-g8e8b42
     privileged: true
     user: root
     networks:
@@ -79,8 +71,7 @@ services:
 
   ms-ui:
     container_name: ms-ui
-    #image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
-    image: quay.io/ortelius/ms-ui
+    image: quay.io/ortelius/ms-ui:main-v10.0.444-g1b7ba4
     privileged: true
     user: root
     networks:
@@ -88,8 +79,7 @@ services:
 
   ms-validate-user:
     container_name: ms-validate-user
-    #image: quay.io/ortelius/ms-validate-user:main-v10.0.1019-g7b5359
-    image: quay.io/ortelius/ms-validate-user
+    image: quay.io/ortelius/ms-validate-user:main-v10.0.1019-g7b5359
     privileged: true
     user: root
     networks:
